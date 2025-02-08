@@ -3,18 +3,13 @@ package com.mateus.bffagendador.business;
 import com.mateus.bffagendador.business.dto.in.TarefasDTORequest;
 import com.mateus.bffagendador.business.dto.out.TarefasDTOResponse;
 import com.mateus.bffagendador.business.enums.StatusNotificacaoEnum;
-import com.mateus.bffagendador.infrastructure.TarefasClient;
+import com.mateus.bffagendador.infrastructure.client.TarefasClient;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 @RequiredArgsConstructor

@@ -7,7 +7,7 @@ import com.mateus.bffagendador.business.dto.in.UsuarioDTORequest;
 import com.mateus.bffagendador.business.dto.out.EnderecoDTOResponse;
 import com.mateus.bffagendador.business.dto.out.TelefoneDTOResponse;
 import com.mateus.bffagendador.business.dto.out.UsuarioDTOResponse;
-import com.mateus.bffagendador.infrastructure.UsuarioClient;
+import com.mateus.bffagendador.infrastructure.client.UsuarioClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

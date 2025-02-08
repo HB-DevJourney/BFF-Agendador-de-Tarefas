@@ -1,4 +1,4 @@
-package com.mateus.bffagendador.infrastructure;
+package com.mateus.bffagendador.infrastructure.client;
 
 import com.mateus.bffagendador.business.dto.in.TarefasDTORequest;
 import com.mateus.bffagendador.business.dto.out.TarefasDTOResponse;
