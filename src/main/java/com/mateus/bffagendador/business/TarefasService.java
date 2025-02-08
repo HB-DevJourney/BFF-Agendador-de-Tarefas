@@ -5,16 +5,24 @@ import com.mateus.bffagendador.business.dto.out.TarefasDTOResponse;
 import com.mateus.bffagendador.business.enums.StatusNotificacaoEnum;
 import com.mateus.bffagendador.infrastructure.TarefasClient;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
 public class TarefasService {
 
     private final TarefasClient client;
+    private final RestTemplate restTemplate = new RestTemplate();
+
 
     public TarefasDTOResponse salvarTarefa(String token, TarefasDTORequest dto) {
         return client.salvarTarefas(dto, token);
@@ -39,4 +47,5 @@ public class TarefasService {
     public TarefasDTOResponse updateTarefas(TarefasDTORequest dto, String id, String token) {
         return client.updateTarefas(dto, id, token);
     }
+
 }
